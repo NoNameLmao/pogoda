@@ -1,0 +1,19 @@
+{
+  "name": "pogoda",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "ts-node": "npx ts-node ./src/.",
+    "bun": "npx bun ./src/."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bun": "^1.0.7",
+    "typeorm": "^0.3.17",
+    "typescript": "^5.2.2"
+  }
+}
