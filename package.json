@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npx npm-run-all --parallel ts-node webpack",
+    "start:bun": "npx npm-run-all --parallel bun webpack",
+    "webpack": "npx webpack serve",
     "ts-node": "npx ts-node ./src/.",
     "bun": "npx bun ./src/."
   },
