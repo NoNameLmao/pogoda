@@ -1,3 +1,5 @@
+// read geo.json and insert data from it into mysql //
+
 const mysql = require('mysql');
 const fs = require('fs');
 const path = require('path');
@@ -16,7 +18,7 @@ const connection = mysql.createConnection({
 const geojsonFilePath = path.join(__dirname, './geo.json');
 const geojsonData = JSON.parse(fs.readFileSync(geojsonFilePath, 'utf8'));
 
-const cities = geojsonData.features.map((feature) => {
+const cities = geojsonData.features.map(feature => {
     const { name, population, coordinates } = feature.properties;
     const [longitude, latitude] = coordinates;
     return [name, population, latitude, longitude];
@@ -39,5 +41,6 @@ connection.query(createTableQuery, error => {
         
         console.log('Data inserted successfully');
         connection.end();
+        process.exit(0)
     });
 });
