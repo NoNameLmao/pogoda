@@ -1,0 +1,17 @@
+.header {
+  text-align: center;
+  padding-top: 32px;
+
+  &__title {
+    color: #fff;
+    font-size: 45px;
+    font-weight: 300;
+    padding-bottom: 18px;
+  }
+
+  &__subtitle {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 100;
+  }
+}

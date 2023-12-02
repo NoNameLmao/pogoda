@@ -1,0 +1,26 @@
+.container {
+  // ЦЕНТРИРОВАНИЕ
+  // position: absolute;
+  // top: 50%;
+  // left: 50%;
+  // margin-right: -50%;
+  // transform: translate(-50%, -50%);
+  // width: 75%;
+  // height: 90%;
+
+  height: 100vh;
+  margin: 0 auto;
+  width: 85%;
+
+  background-color: #000;
+  background-image: url(../images/background-img.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: inset;
+  box-shadow: -1px 0px 34px 13px rgba(0, 0, 0, 0.35);
+
+  @media (max-width: $tablet-width) {
+    width: 100%;
+  }
+}

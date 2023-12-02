@@ -1,0 +1,55 @@
+.detailed-description {
+  max-width: 715px;
+  width: 100%;
+  background: rgba(52, 75, 77, 0.3);
+  backdrop-filter: blur(9px);
+
+  &__title {
+    padding-top: 25px;
+    padding-bottom: 10px;
+    color: #fff;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 100;
+  }
+
+  &__wrapper {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__temperature {
+    color: #fff;
+    font-size: 30px;
+    font-weight: 200;
+  }
+
+  &__icon {
+    width: 64px;
+    height: 64px;
+  }
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+
+    &:nth-child(odd) {
+      background: rgba(52, 75, 77, 0.3);
+    }
+
+    &:nth-child(even) {
+      background: rgba(69, 93, 95, 0.3);
+    }
+  }
+
+  &__text {
+    font-family: "Montserrat", Arial, Helvetica, sans-serif;
+    color: #fff;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 100;
+  }
+}

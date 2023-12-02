@@ -1,0 +1,20 @@
+.page {
+  font-family: "Montserrat" Arial, Helvetica, sans-serif;
+  background-color: #235160;
+  color: #fff;
+
+  &__search {
+    margin-top: 96px;
+    margin-bottom: 59px;
+  }
+
+  &__wrapper {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+
+    @media (max-width: 550px) {
+      flex-wrap: wrap;
+    }
+  }
+}

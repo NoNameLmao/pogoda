@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>my Weather</title>
+  </head>
+
+  <body class="page">
+    <div class="container">
+      <header class="header">
+        <h1 class="header__title">myWheather</h1>
+        <p class="header__subtitle">wheather forecast for<br />everyday</p>
+      </header>
+
+      <main>
+        <form class="search" action="#">
+          <input
+            class="page__search search__input"
+            placeholder="Введите ваш город"
+            type="text"
+          />
+          <button class="search__button" type="submit">
+            <img
+              class="search__icon"
+              src="./assets/images/magnifier.svg"
+              alt="поиск"
+            />
+          </button>
+        </form>
+
+        <div class="page__wrapper">
+          <section class="page__cities cities">
+            <h2 class="cities__title">Список городов</h2>
+            <ul class="cities__list">
+              <li class="cities__item">Новороссийск</li>
+              <li class="cities__item">Краснодар</li>
+              <li class="cities__item">Москва</li>
+              <li class="cities__item">Мурманкс</li>
+              <li class="cities__item">Сочи</li>
+              <li class="cities__item">Анапа</li>
+              <li class="cities__item">Геленджик</li>
+              <li class="cities__item">Томск</li>
+            </ul>
+          </section>
+
+          <section class="page__info detailed-description">
+            <h2 class="detailed-description__title">Новороссийск</h2>
+            <div class="detailed-description__wrapper">
+              <img
+                class="detailed-description__icon"
+                src="./assets/images/weather-icons/night/263.png"
+                alt="иконка погоды"
+              />
+              <p class="detailed-description__temperature">+15°C</p>
+            </div>
+
+            <ul class="detailed-description__list">
+              <li class="detailed-description__item">
+                <p class="detailed-description__text">По ощущению</p>
+                <p class="detailed-description__text">+18°C</p>
+              </li>
+              <li class="detailed-description__item">
+                <p class="detailed-description__text">Давление</p>
+                <p class="detailed-description__text">761 мм рт. ст.</p>
+              </li>
+              <li class="detailed-description__item">
+                <p class="detailed-description__text">Ветер</p>
+                <p class="detailed-description__text">2 м/c</p>
+              </li>
+              <li class="detailed-description__item">
+                <p class="detailed-description__text">Влажность</p>
+                <p class="detailed-description__text">83%</p>
+              </li>
+            </ul>
+          </section>
+        </div>
+      </main>
+    </div>
+    <script src="./assets/js/index.js"></script>
+  </body>
+</html>

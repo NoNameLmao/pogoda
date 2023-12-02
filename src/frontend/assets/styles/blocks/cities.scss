@@ -1,0 +1,41 @@
+.cities {
+  padding: 25px;
+  max-width: 420px;
+  width: 100%;
+  background-color: rgba(44, 55, 65, 15%);
+  backdrop-filter: blur(5px);
+
+  &__title {
+    padding-bottom: 18px;
+    color: #fff;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 100;
+    line-height: 35px;
+  }
+
+  &__item {
+    padding-top: 5px;
+    padding-left: 10px;
+    padding-bottom: 5px;
+    align-items: center;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 100;
+    cursor: pointer;
+
+    &:hover:nth-child(odd) {
+      background-color: rgba(86, 115, 117, 0.3);
+      transition: background 0.7s;
+    }
+
+    &:hover:nth-child(even) {
+      background-color: rgba(41, 61, 63, 0.3);
+      transition: background 0.7s;
+    }
+  }
+
+  &__item:last-child {
+    padding-bottom: 0;
+  }
+}
