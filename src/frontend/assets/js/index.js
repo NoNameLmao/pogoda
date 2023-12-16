@@ -20,3 +20,14 @@ searchBar.addEventListener('input', function () {
     }
     xhr.send();
 })
+
+const exampleCities = document.getElementsByClassName('cities__list');
+
+[...exampleCities[0].children].forEach(city => {
+    city.addEventListener('click', cityAutofill);
+})
+
+function cityAutofill(event) {
+    searchBar.value = event.target.textContent;
+    suggestionList.innerHTML = '';
+}
