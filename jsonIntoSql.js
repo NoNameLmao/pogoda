@@ -19,9 +19,15 @@ const geojsonFilePath = path.join(__dirname, './geo.json');
 const geojsonData = JSON.parse(fs.readFileSync(geojsonFilePath, 'utf8'));
 
 const cities = geojsonData.features.map(feature => {
-    const { name, population, coordinates } = feature.properties;
-    const [longitude, latitude] = coordinates;
-    return [name, population, latitude, longitude];
+    try {
+        const { name, population } = feature.properties;
+        const { coordinates } = feature.geometry;
+        const [longitude, latitude] = coordinates;
+        return [name, population, latitude, longitude];
+    } catch (error) {
+        console.log(feature, error);
+        process.exit()
+    }
 });
 
 const createTableQuery = `
