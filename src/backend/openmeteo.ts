@@ -1,6 +1,6 @@
 export class OpenMeteo {
     baseUrl = 'https://api.open-meteo.com/v1'
-    async current(lat: number, lon: number) {
+    async current(lat: number | string, lon: number | string) {
         const res = await fetch(`${this.baseUrl}/forecast?latitude=${lat}&longitude=${lon}&wind_speed_unit=ms&current=temperature_2m,apparent_temperature,surface_pressure,wind_speed_10m,wind_direction_10m,relative_humidity_2m`)
         const data = await res.json()
         const {
